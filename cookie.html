@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pokaz{
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body onload ="znikanie()" >
+    <div id="pokaz">
+        zgadzam sie na pliki cookie
+        <button onclick="ciastka()">zgadzam sie na ciasteczka
+        </button>
+    </div>
+    <script>
+        function ciastka(){
+            document.cookie = "cookieAccept: true";
+            zniknij();
+        }
+
+        function zniknij(){
+            if (document.cookie == "cookieAccept: true")
+            var div = document.getElementById("pokaz");
+            div.style.display = "none";
+        }
+
+    </script>
+    
+</body>
+</html>
